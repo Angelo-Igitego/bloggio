@@ -1,0 +1,12 @@
+<%= form_with model:[ post, Comment.new] do |form| -%>
+<div class="row">
+	<div class="col-9">
+		
+		<%= form.text_area :content, class: "form-control"-%>
+	</div>
+	<div class="col-2">
+		
+		<%= form.submit class: "btn btn-primary btn-sm" -%>
+	</div>
+</div>
+<% end -%>

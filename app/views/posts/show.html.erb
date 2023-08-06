@@ -2,9 +2,25 @@
 
 <%= render @post %>
 
-<div>
-  <%= link_to "Edit this post", edit_post_path(@post) %> |
-  <%= link_to "Back to posts", posts_path %>
+<div class="row">
+  <div class="col-8">
+    <%= render "posts/comments", post: @post %>
+  </div>
+</div>
 
-  <%= button_to "Destroy this post", @post, method: :delete %>
+<br>
+<div class="row g-3 align-items-center">
+
+  <div class="col-auto">
+    <%= link_to "Edit this post", edit_post_path(@post) %> 
+  </div>
+  
+  <div class="col-auto">
+    <%= link_to "Back to posts", posts_path %>
+  </div>
+
+  <div class="col-auto">
+    <%= link_to "Destroy this post", @post, method: :delete, class: ""%>
+  </div>
+
 </div>
